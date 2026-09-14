@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ojo dulce</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #FFF5F7; /* rosado pastel */
+            color: #5A3A31; /* chocolate suave */
+        }
+
+        /* ---------------------- HEADER ---------------------- */
+        header {
+            background-color: #FFB7C5; /* rosita dulce */
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 4px solid #F7DFAE; /* amarillo pastel */
+        }
+
+        header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 30px;
+            color: #5A3A31;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #A63A50; /* rosa frambuesa */
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        nav a:hover {
+            color: #FF69A3; /* rosa chicle */
+        }
+
+
+        /* ---------------------- INICIO ---------------------- */
+        #inicio {
+            background-image: url("D:\ojo dulce/fondo.avif"); /* tu imagen */
+            background-size: cover;
+            background-position: center;
+            height: 75vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            text-align: center;
+        }
+
+        #inicio::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            background-color: rgba(255, 190, 200, 0.45); /* capa rosadita */
+        }
+
+        .inicio-contenido {
+            position: relative;
+            z-index: 1;
+            color: #5A3A31;
+            background-color: rgba(255,255,255,0.75);
+            padding: 25px;
+            border-radius: 15px;
+            width: 320px;
+        }
+
+        .inicio-contenido img {
+            width: 130px;
+            margin-bottom: 15px;
+        }
+
+        /* ---------------------- MENÚ (DISEÑO DIFERENTE) ---------------------- */
+        #menu {
+            padding: 50px 20px;
+        }
+
+        .titulo-menu {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #A63A50;
+        }
+
+        .grid-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+        }
+
+        .item {
+            background-color: #FFEDEE;
+            border: 3px solid #F7DFAE;
+            padding: 15px;
+            border-radius: 15px;
+            transform: rotate(-2deg);
+            transition: 0.3s;
+        }
+
+        .item:hover {
+            transform: rotate(0deg) scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .item img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .item h3 {
+            font-size: 20px;
+            color: #5A3A31;
+            margin-bottom: 5px;
+        }
+
+        .item p {
+            font-size: 15px;
+            color: #7A4B3A;
+            margin-bottom: 5px;
+        }
+
+        .precio {
+            color: #A63A50;
+            font-weight: bold;
+        }
+
+        /* ---------------------- REDES ---------------------- */
+        #redes {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #FFE3E8;
+        }
+
+        .qr-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            border: 3px solid #FFB7C5;
+            display: inline-block;
+        }
+
+        .qr {
+            width: 200px;
+        }
+
+        /* ---------------------- FOOTER ---------------------- */
+        footer {
+            background-color: #FFB7C5;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            border-top: 4px solid #F7DFAE;
+            color: #5A3A31;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- -------- HEADER -------- -->
+    <header>
+        <h1>Dulces Delicias</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#menu">Menú</a>
+            <a href="#redes">Redes</a>
+<a href="#registro" style="float:right; margin-right:20px; color:#A63A50; font-weight:bold;">Registro</a>
+        </nav>
+    </header>
+
+    <!-- -------- INICIO -------- -->
+    <section id="inicio">
+        <div class="inicio-contenido">
+            <img src="D:\ojo dulce/logo.jfif" alt="Logo Dulces Delicias">
+            <h2>Postres que endulzan tu día</h2>
+        </div>
+    </section>
+
+    <!-- -------- MENÚ -------- -->
+    <section id="menu">
+        <h2 class="titulo-menu">Nuestro Menú</h2>
+
+        <div class="grid-menu">
+
+            <!-- Arroz con leche -->
+            <div class="item">
+                <img src="D:\ojo dulce/arroz con leche.jfif" alt="Arroz con leche">
+                <h3>Arroz con leche</h3>
+                <p>Cremoso, dulce y con un toque de canela.</p>
+                <p class="precio">Bs 10</p>
+            </div>
+
+            <!-- Alfajores -->
+            <div class="item">
+                <img src="D:\ojo dulce/alfajor.jfif" alt="alfajores">
+                <h3>Alfajores</h3>
+                <p>Suaves, rellenos de manjar y bañados en azúcar.</p>
+                <p class="precio">Bs 5 c/u</p>
+            </div>
+
+            <!-- Merengues -->
+            <div class="item">
+                <img src="D:\ojo dulce/merengues.jfif" alt="merengues">
+                <h3>Merengues</h3>
+                <p>Livianos, crocantes y delicadamente dulces.</p>
+                <p class="precio">Bs 4 c/u</p>
+            </div>
+
+            <!-- Mousse de maracuyá -->
+            <div class="item">
+                <img src="D:\ojo dulce/mousse de maracuya.jfif" alt="mousse">
+                <h3>Mousse de maracuyá</h3>
+                <p>Fresco, suave y con sabor tropical.</p>
+                <p class="precio">Bs 15</p>
+            </div>
+
+            <!-- Cheesecake limón -->
+            <div class="item">
+                <img src="D:\ojo dulce/postre de limon.jpg" alt="cheesecake limón">
+                <h3>Cheesecake de limón</h3>
+                <p>Ácido, cremoso y perfecto para el calor.</p>
+                <p class="precio">Bs 18</p>
+            </div>
+
+            <!-- Cheesecake Oreo -->
+            <div class="item">
+                <img src="D:\ojo dulce/cheesecake de oreo.jpg" alt="cheesecake oreo">
+                <h3>Cheesecake de Oreo</h3>
+                <p>Galleta Oreo + crema = la perfección.</p>
+                <p class="precio">Bs 20</p>
+            </div>
+
+            <!-- Rollo de canela -->
+            <div class="item">
+                <img src="D:\ojo dulce/rollo de canela.jfif" alt="rollo de canela">
+                <h3>Rollo de canela</h3>
+                <p>Esponjoso, cálido y bañado en glaseado.</p>
+                <p class="precio">Bs 12</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- -------- REDES -------- -->
+    <section id="redes">
+        <h2>Síguenos en Instagram</h2>
+        <div class="qr-box">
+            <img src="D:\ojo dulce/qr.jfif" class="qr" alt="QR de Instagram">
+        </div>
+    </section>
+
+<section id="registro" style="padding:40px; background-color:#FFE3E8;">
+    <h2 style="text-align:center; color:#A63A50;">Registro de Clientes</h2>
+
+    <form id="formRegistro" style="max-width:400px; margin:20px auto; background:white; padding:20px; border-radius:15px; border:3px solid #FFB7C5;">
+        
+        <label>Nombre:</label>
+        <input type="text" id="nombre" required style="width:100%; padding:8px; margin-bottom:10px;">
+
+        <label>Correo:</label>
+        <input type="email" id="correo" required style="width:100%; padding:8px; margin-bottom:10px;">
+
+        <label>Fecha de nacimiento:</label>
+        <input type="date" id="fecha" required style="width:100%; padding:8px; margin-bottom:10px;">
+
+        <label>Plan:</label>
+        <select id="plan" required style="width:100%; padding:8px; margin-bottom:10px;">
+            <option value="casual">Casual</option>
+            <option value="pro">Pro</option>
+            <option value="vip">VIP</option>
+        </select>
+
+        <button type="submit" style="padding:10px 20px; background-color:#FFB7C5; border:none; border-radius:10px; cursor:pointer; font-weight:bold;">
+            Registrar
+        </button>
+    </form>
+</section>
+
+<section id="clientes" style="padding:40px;">
+    <h2 style="text-align:center; color:#A63A50;">Clientes Registrados</h2>
+
+    <div style="display:flex; justify-content:space-around; margin-top:30px;">
+
+        <div>
+            <h3 style="color:#A63A50;">Casual</h3>
+            <ul id="listaCasual" style="background:#FFEDEE; padding:15px; border-radius:10px; min-width:200px;"></ul>
+        </div>
+
+        <div>
+            <h3 style="color:#A63A50;">Pro</h3>
+            <ul id="listaPro" style="background:#FFEDEE; padding:15px; border-radius:10px; min-width:200px;"></ul>
+        </div>
+
+        <div>
+            <h3 style="color:#A63A50;">VIP</h3>
+            <ul id="listaVIP" style="background:#FFEDEE; padding:15px; border-radius:10px; min-width:200px;"></ul>
+        </div>
+    </div>
+</section>
+
+    <!-- -------- FOOTER -------- -->
+    <footer>
+       Jhon Jairo Zabala Melgar
+    </footer>
+
+<script>
+    // Cargar datos al iniciar
+    document.addEventListener("DOMContentLoaded", mostrarClientes);
+
+    // Cuando envían formulario
+    document.getElementById("formRegistro").addEventListener("submit", function(e){
+        e.preventDefault();
+
+        let nombre = document.getElementById("nombre").value;
+        let correo = document.getElementById("correo").value;
+        let fecha = document.getElementById("fecha").value;
+        let plan = document.getElementById("plan").value;
+
+        // Crear objeto
+        let persona = { nombre, correo, fecha, plan };
+
+        // Guardar en localStorage
+        let lista = JSON.parse(localStorage.getItem("clientes")) || [];
+        lista.push(persona);
+        localStorage.setItem("clientes", JSON.stringify(lista));
+
+        mostrarClientes(); // actualizar lista
+        this.reset(); // limpiar formulario
+        alert("¡Registro exitoso!");
+    });
+
+    function mostrarClientes(){
+        let lista = JSON.parse(localStorage.getItem("clientes")) || [];
+
+        document.getElementById("listaCasual").innerHTML = "";
+        document.getElementById("listaPro").innerHTML = "";
+        document.getElementById("listaVIP").innerHTML = "";
+
+        lista.forEach(p => {
+            let li = `<li>${p.nombre}</li>`;
+            if(p.plan === "casual") document.getElementById("listaCasual").innerHTML += li;
+            if(p.plan === "pro") document.getElementById("listaPro").innerHTML += li;
+            if(p.plan === "vip") document.getElementById("listaVIP").innerHTML += li;
+        });
+    }
+</script>
+
+</body>
+</html>
